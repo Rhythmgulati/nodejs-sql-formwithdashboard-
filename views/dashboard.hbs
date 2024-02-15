@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       table, tr,td{
+            border: 1px solid black;
+        }
+        table{
+            width: 60%;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student list</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>Mno.</th>
+            <th>ACTION</th>
+        </tr>
+
+   
+    {{#each students}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{mno}}</td>
+            <td>
+                <a href="/delete/{{id}}">delete</a>
+                <a href="/update/{{id}}">update</a>
+            </td>
+        </tr>
+     {{/each}}
+     </table>
+</body>
+</html>
